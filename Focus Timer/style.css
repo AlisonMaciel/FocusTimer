@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --colorDarkBody: #121214;
+  --colorWhiteBody: #f8f8fc;
+  --colorBackgrounTimer: #42D3FF;
+  --colorBoxTimer: #242424;
+  --colorTimerMin: #121214;
+  font-size: 62.5%;
+}
+
+body.light {
+  background-color: var(--colorWhiteBody);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+  display: none;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--colorDarkBody);
+}
+
+
+#app {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  height: 100vh;
+  color: var(--colorWhiteBody);
+}
+
+
+.toggle-mode {
+  position: absolute;
+  right: 3.2rem;
+  top: 3.2rem;
+  cursor: pointer;
+  font-size: 3.2rem;
+  background-color: transparent;
+  border: 0;
+  color: var(--colorWhiteBody);
+}
+
+.toggle-mode.moon {
+  color: var(--colorDarkBody);
+}
+
+.timer span {
+  
+  width: 24.8rem;
+  height: 11.3rem;
+  
+  font-size: 9.6rem;
+  line-height: 11.2rem;
+  color: var(--colorWhiteBody);
+}
+
+.timer.dark span {
+  color: var(--colorDarkBody);
+}
+
+.controls {
+  
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ padding: 2.2rem 4.0rem;
+ gap: 1.6rem;
+
+ background: var(--colorBoxTimer);
+ border-radius: 9999rem;
+}
+
+.controls button {
+  font-size: 6.2rem;
+  color: var(--colorBackgrounTimer);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+#stop, #speaker-none, #timer{
+  color: var(--colorWhiteBody);
+}
+/*Controls*/
+
+.running .ph-play-circle, 
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high {
+  display: none;
+}
+
+
+

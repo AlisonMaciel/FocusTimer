@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporizador estilo pomodoro">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  <title>FocusTimer - Pomodoro</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="./src/script.js" type="module" defer></script>
+
+</head>
+<body>
+
+  <div id="app">
+    <button class="toggle-mode ">
+      <span class="sr-only">
+        ativar/desativar light mode
+      </span>
+      <i class="ph ph-sun"></i>
+      <i class="ph ph-moon"></i>
+    </button>
+
+    <section class="timer">
+      <span id="minuts">00</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+    </section>
+
+    <section class="controls">
+      <button
+        data-action="toggleRunning" 
+        class="ph ph-play-circle"
+        aria-label="iniciar contagem">
+      </button>
+    
+      <button
+        data-action="toggleRunning" 
+        class="ph ph-pause-circle" 
+        aria-label="pausar contagem">
+      </button>
+    
+      <button
+        data-action="set" 
+        class="ph ph-timer" 
+        id="timer" 
+        aria-label="iniciar cronômetro">
+      </button>
+    
+      <button
+        data-action="reset" 
+        class="ph ph-stop-circle" 
+        id="stop" 
+        aria-label="parar contagem">
+      </button>
+    
+      <button
+        data-action="toggleMusic" 
+        class="ph ph-speaker-none" 
+        id="speaker-none" 
+        aria-label="iniciar som">
+      </button>
+    
+      <button
+        data-action="toggleMusic" 
+        class="ph ph-speaker-high" 
+        aria-label="parar som">
+      </button>
+    </section>
+    
+  </div>
+</body>
+</html>
